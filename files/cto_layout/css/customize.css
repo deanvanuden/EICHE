@@ -657,15 +657,22 @@ body.eiche-modern-home #wrapper #article-14784 {
 
 .eiche-service-card {
   position: relative;
-  min-height: clamp(360px, 31vw, 470px);
+  height: clamp(430px, 39vw, 572px);
+  min-height: 0;
   display: grid;
-  grid-template-rows: 1fr 96px;
+  grid-template-rows: minmax(0, 1fr) clamp(78px, 6vw, 92px);
   overflow: hidden;
   text-decoration: none !important;
   background: var(--eiche-green);
 }
 
-.eiche-service-card img {
+.eiche-service-card__image {
+  min-height: 0;
+  overflow: hidden;
+  background: var(--eiche-green);
+}
+
+.eiche-service-card__image img {
   width: 100%;
   height: 100%;
   min-height: 0;
@@ -675,27 +682,62 @@ body.eiche-modern-home #wrapper #article-14784 {
   transition: transform 600ms cubic-bezier(.2,.7,.2,1), filter 600ms ease;
 }
 
-.eiche-service-card span {
-  display: flex;
+.eiche-service-card__caption {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) 24px;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 0 28px;
-  color: #fff;
-  background: linear-gradient(135deg, #073b2a, #0b4a35);
-  font-size: clamp(1.05rem, 1.45vw, 1.28rem);
+  gap: 15px;
+  min-height: 0;
+  padding: 0 clamp(18px, 2vw, 28px);
+  color: #fff8ea;
+  background: linear-gradient(135deg, var(--eiche-green), #0a4633);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-size: clamp(0.98rem, 1.05vw, 1.14rem);
   font-weight: 800;
+  line-height: 1.18;
 }
 
-.eiche-service-card b {
+.eiche-service-card__icon {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--eiche-gold);
+}
+
+.eiche-service-card__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.eiche-service-card__title {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+.eiche-service-card__arrow {
   color: var(--eiche-gold);
   font-size: 1.55rem;
   font-weight: 500;
+  line-height: 1;
+  text-align: right;
+  transition: transform 360ms cubic-bezier(.2,.7,.2,1);
 }
 
-.eiche-service-card:hover img {
-  transform: scale(1.055);
-  filter: saturate(1.05);
+.eiche-service-card:hover .eiche-service-card__image img {
+  transform: scale(1.045);
+  filter: saturate(1.02) brightness(0.96);
+}
+
+.eiche-service-card:hover .eiche-service-card__arrow {
+  transform: translateX(4px);
 }
 
 .eiche-material-strip {
@@ -1555,7 +1597,25 @@ button:focus-visible {
   }
 
   .eiche-service-card {
-    min-height: 330px;
+    height: 350px;
+    min-height: 0;
+    grid-template-rows: minmax(0, 1fr) 74px;
+  }
+
+  .eiche-service-card__caption {
+    grid-template-columns: 30px minmax(0, 1fr) 22px;
+    gap: 12px;
+    padding: 0 20px;
+    font-size: 1rem;
+  }
+
+  .eiche-service-card__icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .eiche-service-card__arrow {
+    font-size: 1.42rem;
   }
 
   .eiche-material-panel,
