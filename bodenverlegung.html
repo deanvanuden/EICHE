@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
     <title>Bodenverlegung Düren - EICHE Meisterbetrieb</title>
-    <base href="https://www.eiche-malerbetrieb.de/">
+    <base href="./">
 		<meta name="robots" content="index,follow">
 	<meta name="description" content="Sie interessieren sich für eine Bodenverlegung? Fragen Sie uns, wir beraten Sie fachmännisch. Schillingsstr. 106, 52355 Düren - ✆ +49 2421 81325">
 	<meta name="generator" content="Contao Open Source CMS">
@@ -18,7 +18,7 @@
 	<link rel="stylesheet" href="assets/css/grid.min.css,colorbox.min.css,mediabox-black.min.css,chosen.min....-57125168.css">	<link rel="preload" as="font" crossorigin="anonymous" href="files/cto_layout/fonts/fontawesome-webfont.woff2">
 		<link rel="stylesheet preload" as="style" type="text/css" media="screen" href="assets/css/animate.css,isotope_styles.css,font-awesome.min.css,themify-icon...-09451665.css.minified.css">
 			<link id="layout_css" rel="stylesheet preload" as="style" title="layout_css" type="text/css" href="files/cto_layout/themedesigner/css/32_1733952629.css">
-					<link rel="stylesheet preload" as="style" type="text/css" href="files/cto_layout/css/customize.css">	<link rel="stylesheet preload" as="style" type="text/css" media="print" href="files/cto_layout/css/print.css">
+					<link rel="stylesheet" type="text/css" href="files/cto_layout/css/customize.css">	<link rel="stylesheet preload" as="style" type="text/css" media="print" href="files/cto_layout/css/print.css">
 		
    <script src="assets/js/jquery.min.js,mootools.min.js-8f40bdde.js"></script></head>
 <body class="unknown other  home" itemscope itemtype="http://schema.org/WebPage">
@@ -46,7 +46,7 @@
 	</div>
 </div>
 
-<div class="logo"><a href="./"></a></div><div class="mmenu_trigger" title="Open mobile navigation">
+<div class="logo"><a href="index.html"></a></div><div class="mmenu_trigger" title="Open mobile navigation">
 	<div class="label">Menu</div>
 	<div class="burger transform">
 		<div class="burger_lines"></div>
@@ -68,7 +68,7 @@
 	    
 		
 		<li class="mlist regular first level_1 page_3023 ">
-		<a href="./" title="Ihr Maler in Düren" class="mainmenu_link a-level_1 regular first level_1 page_3023"><span>Start</span></a>
+		<a href="index.html" title="Ihr Maler in Düren" class="mainmenu_link a-level_1 regular first level_1 page_3023"><span>Start</span></a>
 			</li>
 		
 	
@@ -557,7 +557,9 @@
 
 </div>
 
-	</div>
+	
+<a class="eiche-footer-cta" href="kontakt.html">Kontakt aufnehmen <span aria-hidden="true">-&gt;</span></a>
+</div>
 
 </div>
   
@@ -582,7 +584,7 @@
 			<div class="smartmenu-table">
 				<ul class="vlist level_1">
    
-<li class="mlist regular first "><a href="./" title="Ihr Maler in Düren" class="a-level_1 regular first">Start</a></li>
+<li class="mlist regular first "><a href="index.html" title="Ihr Maler in Düren" class="a-level_1 regular first">Start</a></li>
    
 <li class="mlist forward submenu trail "><a href="betonsanierung.html" title="Farb-Projekte" class="a-level_1 forward submenu trail">Farb-Projekte</a><span class="subitems_trigger"></span><ul class="vlist level_2">
    
@@ -697,7 +699,7 @@
 	</div>
 </div>
 
-<div class="logo"><a href="./"></a></div><div class="mmenu_trigger" title="Open mobile navigation">
+<div class="logo"><a href="index.html"></a></div><div class="mmenu_trigger" title="Open mobile navigation">
 	<div class="label">Menu</div>
 	<div class="burger transform">
 		<div class="burger_lines"></div>
@@ -719,7 +721,7 @@
 	    
 		
 		<li class="mlist regular first level_1 page_3023 ">
-		<a href="./" title="Ihr Maler in Düren" class="mainmenu_link a-level_1 regular first level_1 page_3023"><span>Start</span></a>
+		<a href="index.html" title="Ihr Maler in Düren" class="mainmenu_link a-level_1 regular first level_1 page_3023"><span>Start</span></a>
 			</li>
 		
 	
@@ -1027,7 +1029,7 @@
   
   <ul class="vlist level_1">
   
-<li class="mlist regular first"><a href="./" title="Ihr Maler in Düren" class="a-level_1 regular first">Start</a></li>
+<li class="mlist regular first"><a href="index.html" title="Ihr Maler in Düren" class="a-level_1 regular first">Start</a></li>
   
 <li class="mlist forward submenu trail"><a href="betonsanierung.html" title="Farb-Projekte" class="a-level_1 forward submenu trail">Farb-Projekte</a><ul class="vlist level_2">
   
@@ -1120,7 +1122,7 @@
   
   <ul class="vlist level_1">
   
-<li class="mlist regular first"><a href="./" title="Ihr Maler in Düren" class="a-level_1 regular first">Start</a></li>
+<li class="mlist regular first"><a href="index.html" title="Ihr Maler in Düren" class="a-level_1 regular first">Start</a></li>
   
 <li class="mlist forward submenu trail"><a href="betonsanierung.html" title="Farb-Projekte" class="a-level_1 forward submenu trail">Farb-Projekte</a><ul class="vlist level_2">
   
@@ -1856,5 +1858,87 @@ jQuery(document).ready(function()
 </script>
 <div id="viewport-pixel"></div>
 <div id="outdated-browser">You are using an outdated browser. The website may not be displayed correctly. <span>Close</span></div>
+<script id="eiche-nav-bridge">
+(function(){
+  function init(){
+    var active = null;
+    var activeHeader = null;
+    var closeTimer = null;
+    var items = Array.prototype.slice.call(document.querySelectorAll('.header .mainmenu ul.level_1 > li.submenu'));
+
+    function clearClose(){
+      if(closeTimer){ clearTimeout(closeTimer); closeTimer = null; }
+    }
+
+    function open(item){
+      clearClose();
+      if(active && active !== item) active.classList.remove('eiche-submenu-open');
+      active = item;
+      activeHeader = item.closest('.header') || document.querySelector('.header');
+      item.classList.add('eiche-submenu-open');
+    }
+
+    function closeNow(){
+      clearClose();
+      if(active) active.classList.remove('eiche-submenu-open');
+      active = null;
+      activeHeader = null;
+    }
+
+    function closeSoon(delay){
+      clearClose();
+      closeTimer = setTimeout(closeNow, delay || 160);
+    }
+
+    function inside(rect, x, y, pad){
+      if(!rect) return false;
+      pad = pad || 0;
+      return x >= rect.left - pad && x <= rect.right + pad && y >= rect.top - pad && y <= rect.bottom + pad;
+    }
+
+    function isInsideOpenArea(x, y){
+      if(!active) return false;
+      var menu = active.querySelector('ul.level_2');
+      if(!menu) return false;
+      var menuRect = menu.getBoundingClientRect();
+      var headerRect = (activeHeader || active.closest('.header') || document.querySelector('.header')).getBoundingClientRect();
+      var itemRect = active.getBoundingClientRect();
+
+      if(inside(menuRect, x, y, 10) || inside(headerRect, x, y, 6) || inside(itemRect, x, y, 8)) return true;
+
+      var bandTop = Math.min(headerRect.top, itemRect.top, menuRect.top) - 8;
+      var bandBottom = Math.max(headerRect.bottom, itemRect.bottom, menuRect.top) + 34;
+      return x >= 0 && x <= window.innerWidth && y >= bandTop && y <= bandBottom;
+    }
+
+    items.forEach(function(item){
+      var menu = item.querySelector('ul.level_2');
+      item.addEventListener('mouseenter', function(){ open(item); });
+      item.addEventListener('pointerenter', function(){ open(item); });
+      item.addEventListener('focusin', function(){ open(item); });
+      if(menu){
+        menu.addEventListener('mouseenter', function(){ open(item); });
+        menu.addEventListener('pointerenter', function(){ open(item); });
+        menu.addEventListener('pointerdown', function(){ open(item); });
+      }
+    });
+
+    document.addEventListener('pointermove', function(e){
+      if(!active) return;
+      if(isInsideOpenArea(e.clientX, e.clientY)) clearClose();
+      else closeSoon(180);
+    }, {passive:true});
+
+    document.addEventListener('pointerdown', function(e){
+      if(active && !isInsideOpenArea(e.clientX, e.clientY)) closeNow();
+    }, {passive:true});
+
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape') closeNow();
+    });
+  }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script>
 </body>
 </html>
