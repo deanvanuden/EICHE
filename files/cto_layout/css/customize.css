@@ -700,20 +700,39 @@ body.eiche-modern-home #wrapper #article-14784 {
 .eiche-service-card__icon {
   width: 34px;
   height: 34px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--eiche-gold);
+  display: inline-block;
+  flex: 0 0 auto;
+  background: var(--eiche-gold);
+  -webkit-mask: var(--eiche-service-icon) center / contain no-repeat;
+  mask: var(--eiche-service-icon) center / contain no-repeat;
 }
 
-.eiche-service-card__icon svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-  stroke: currentColor;
-  stroke-width: 1.7;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.eiche-service-card__icon--house {
+  --eiche-service-icon: url("../../icons/service/house.png");
+}
+
+.eiche-service-card__icon--varnish {
+  --eiche-service-icon: url("../../icons/service/varnish.png");
+}
+
+.eiche-service-card__icon--historic-site {
+  --eiche-service-icon: url("../../icons/service/historic-site.png");
+}
+
+.eiche-service-card__icon--leaf {
+  --eiche-service-icon: url("../../icons/service/leaf.png");
+}
+
+.eiche-service-card__icon--wallpaper {
+  --eiche-service-icon: url("../../icons/service/wallpaper.png");
+}
+
+.eiche-service-card__icon--wallpaper-print {
+  --eiche-service-icon: url("../../icons/service/wallpaper-2.png");
+}
+
+.eiche-service-card__icon--preservation {
+  --eiche-service-icon: url("../../icons/service/preservation.png");
 }
 
 .eiche-service-card__title {
