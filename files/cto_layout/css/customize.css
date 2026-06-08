@@ -1,0 +1,193 @@
+/* Variante 1: Mit CSS aspect-ratio (moderne Browser) */
+.headerbild-2025 {
+  width: 100%;
+  aspect-ratio: 1920 / 833; /* entspricht ca. 2.306:1 */
+  background: url('https://www.eiche-malerbetrieb.de/files/images/team-2025/Gruppenfoto-2025.jpeg') no-repeat center center;
+  background-size: cover;
+}
+
+/* Variante 2: Fallback mit Padding-Top Trick */
+@supports not (aspect-ratio: 1) {
+  .headerbild-2025 {
+    width: 100%;
+    position: relative;
+    padding-top: 43.4%; /* (833 / 1920) * 100 ≈ 43.4% */
+    background: url('https://www.eiche-malerbetrieb.de/files/images/team-2025/Gruppenfoto-2025.jpeg') no-repeat center center;
+    background-size: cover;
+  }
+}
+
+.megamenuschrift {
+	font-size: .9rem;
+}
+.ce_accordion.style2 .toggler.ui-state-active  {
+	background-color: #515151;
+}
+.ce_text_imagebox a {
+	color: #000000;
+}
+.ce_image_text_box.version2 {
+	border: 1px solid #666666;
+}
+.headertitle {
+	background: rgba(255,255,255,0.4);
+	padding-left: 5px;
+	padding-right: 5px;
+}
+/* montserrat-300 - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/montserrat-v25-latin-300.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/montserrat-v25-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/montserrat-v25-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/montserrat-v25-latin-300.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/montserrat-v25-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/montserrat-v25-latin-300.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+/* montserrat-regular - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/montserrat-v25-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/montserrat-v25-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/montserrat-v25-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/montserrat-v25-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/montserrat-v25-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/montserrat-v25-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+/* montserrat-500 - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/montserrat-v25-latin-500.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/montserrat-v25-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/montserrat-v25-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/montserrat-v25-latin-500.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/montserrat-v25-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/montserrat-v25-latin-500.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+/* montserrat-700 - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/montserrat-v25-latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/montserrat-v25-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/montserrat-v25-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/montserrat-v25-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/montserrat-v25-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/montserrat-v25-latin-700.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+/* montserrat-900 - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/montserrat-v25-latin-900.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/montserrat-v25-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/montserrat-v25-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/montserrat-v25-latin-900.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/montserrat-v25-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/montserrat-v25-latin-900.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+/* montserrat-italic - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/montserrat-v25-latin-italic.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/montserrat-v25-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/montserrat-v25-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/montserrat-v25-latin-italic.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/montserrat-v25-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/montserrat-v25-latin-italic.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+.ce_hyperlink_lightbox_video.hyperlink_align_center {
+text-align: center;
+background-color: #efefef;
+padding: 10px;
+}
+.header {
+	position: fixed;
+}
+/* ===========================
+   HERO SLIDER – EICHE
+   =========================== */
+
+.hero-slider-eiche {
+  position: relative;
+  width: 100%;
+  height: 65vh;           /* nach Wunsch: 55–80vh */
+  min-height: 450px;
+  overflow: hidden;
+}
+
+/* Slides – eigene Klasse, kein Konflikt mit Theme */
+.hero-slide-eiche {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  animation: eicheFadeSlider 12s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* Bild 1 */
+.hero-slide-eiche-1 {
+  background-image: url("files/images/maler-dueren-eiche-meisterbetrieb-team.jpeg");
+  animation-delay: 0s;
+}
+
+/* Bild 2 */
+.hero-slide-eiche-2 {
+  background-image: url("files/images/maler-dueren-eiche-meisterbetrieb-startbild-wohnhaus.jpg");
+  animation-delay: 6s; /* Hälfte der Gesamtdauer (12s) */
+}
+
+/* Fade-Animation */
+@keyframes eicheFadeSlider {
+  0%   { opacity: 0; }
+  5%   { opacity: 1; }
+  45%  { opacity: 1; }
+  50%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* Overlay für Text (optional) */
+.hero-slider-eiche-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  color: #fff;
+}
+
+/* Beispiel-Typo – kannst du an dein CI anpassen */
+.hero-slider-eiche-overlay h1 {
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+/* Container im Slider-Artikel vollflächig laufen lassen */
+#slider .article_14973 .container {
+  padding-left: 0;
+  padding-right: 0;
+}
