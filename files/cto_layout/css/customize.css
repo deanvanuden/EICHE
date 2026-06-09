@@ -2980,3 +2980,282 @@ body:not(.eiche-modern-home) #slider .article-pt {
 .header .mainmenu ul.level_1 > li.submenu.eiche-submenu-open > strong span {
   color: var(--eiche-gold) !important;
 }
+
+/* Compact footer contact bar */
+@font-face {
+  font-family: "EicheThemify";
+  src: url("../fonts/themify__query_c10ee4b8c0.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
+#article-14956 {
+  padding-bottom: clamp(24px, 4vw, 48px) !important;
+}
+
+#article-14956 > .container {
+  padding-bottom: clamp(18px, 3vw, 32px) !important;
+}
+
+#footer .inside {
+  width: min(1320px, calc(100% - 48px)) !important;
+  padding: clamp(24px, 3vw, 38px) 0 !important;
+}
+
+#footer .totop {
+  display: none !important;
+}
+
+#footer .eiche-footer-bar {
+  display: grid !important;
+  grid-template-columns: minmax(250px, 0.9fr) minmax(360px, 1.12fr) minmax(280px, 0.92fr) !important;
+  align-items: stretch;
+  justify-items: stretch;
+  gap: 0 !important;
+}
+
+#footer .eiche-footer-bar > .column {
+  display: flex !important;
+  float: none !important;
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0;
+  min-height: 118px;
+  margin: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  box-sizing: border-box;
+  justify-self: stretch;
+}
+
+#footer .eiche-footer-brand:before,
+#footer .eiche-footer-brand:after,
+#footer .eiche-footer-action:before,
+#footer .eiche-footer-action:after {
+  content: none !important;
+  display: none !important;
+}
+
+#footer .eiche-footer-brand {
+  align-items: center;
+  gap: clamp(14px, 2vw, 22px);
+  padding-right: clamp(28px, 4vw, 52px) !important;
+}
+
+#footer .eiche-footer-leaf {
+  flex: 0 0 auto;
+  width: clamp(54px, 5vw, 76px) !important;
+  height: clamp(54px, 5vw, 76px) !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: contain;
+  opacity: 0.68;
+  filter: invert(56%) sepia(24%) saturate(846%) hue-rotate(356deg) brightness(92%) contrast(86%);
+}
+
+#footer .eiche-footer-brand-copy {
+  display: grid;
+  gap: 2px;
+}
+
+#footer .eiche-footer-name,
+#footer .eiche-footer-trade,
+#footer .eiche-footer-since,
+#footer .eiche-footer-row,
+#footer .eiche-footer-action p {
+  margin: 0 !important;
+}
+
+#footer .eiche-footer-name {
+  color: var(--eiche-green) !important;
+  font-size: clamp(1.55rem, 2.1vw, 2.05rem);
+  font-weight: 900;
+  line-height: 0.94;
+  letter-spacing: 0;
+}
+
+#footer .eiche-footer-trade {
+  color: var(--eiche-green) !important;
+  font-size: clamp(0.98rem, 1.28vw, 1.2rem);
+  font-weight: 700;
+  line-height: 1.08;
+}
+
+#footer .eiche-footer-since {
+  color: var(--eiche-gold) !important;
+  font-size: clamp(0.72rem, 0.9vw, 0.86rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+#footer .eiche-footer-contact,
+#footer .eiche-footer-action {
+  border-left: 1px solid rgba(15, 47, 36, 0.22) !important;
+  padding-left: clamp(30px, 4.2vw, 56px) !important;
+}
+
+#footer .eiche-footer-contact {
+  align-items: center;
+  padding-right: clamp(30px, 4vw, 52px) !important;
+}
+
+#footer .eiche-footer-contact-stack {
+  display: grid;
+  gap: 13px;
+}
+
+#footer .eiche-footer-row {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  align-items: center;
+  gap: 18px;
+  color: var(--eiche-ink) !important;
+  font-size: clamp(0.86rem, 1.02vw, 0.98rem);
+  font-weight: 600;
+  line-height: 1.32;
+}
+
+#footer .eiche-footer-row i {
+  width: 28px;
+  color: rgba(187, 135, 61, 0.74);
+  font-size: 1.45rem;
+  font-style: normal;
+  line-height: 1;
+  text-align: center;
+}
+
+#footer .eiche-footer-row i:before,
+#footer .eiche-footer-cta i:before {
+  font-family: "EicheThemify" !important;
+  font-weight: 400;
+}
+
+#footer .eiche-footer-row a {
+  color: var(--eiche-ink) !important;
+  text-decoration: none !important;
+}
+
+#footer .eiche-footer-row a:hover {
+  color: var(--eiche-gold) !important;
+}
+
+#footer .eiche-footer-secondary {
+  display: block;
+  margin-top: 1px;
+  color: rgba(15, 47, 36, 0.72) !important;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+#footer .eiche-footer-action {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 22px;
+}
+
+#footer .eiche-footer-action p {
+  color: var(--eiche-ink) !important;
+  font-size: clamp(0.9rem, 1.06vw, 1.02rem);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+#footer .eiche-footer-cta {
+  display: inline-flex !important;
+  width: min(100%, 260px);
+  min-width: 0;
+  min-height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 0 24px !important;
+  color: #fff !important;
+  background: var(--eiche-green) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  box-shadow: 0 14px 28px rgba(7, 59, 42, 0.14);
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+
+#footer .eiche-footer-cta i {
+  font-size: 1rem;
+  line-height: 1;
+  transition: transform 220ms ease;
+}
+
+#footer .eiche-footer-cta:hover {
+  transform: translateY(-2px);
+  color: #fff !important;
+  background: #0b4a35 !important;
+  box-shadow: 0 18px 34px rgba(7, 59, 42, 0.18);
+}
+
+#footer .eiche-footer-cta:hover i {
+  transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #footer .eiche-footer-bar {
+    animation: eicheRise 520ms cubic-bezier(.2,.7,.2,1) both;
+  }
+}
+
+@media (max-width: 900px) {
+  #footer .inside {
+    width: min(100% - 28px, 1320px) !important;
+    padding: 30px 0 !important;
+  }
+
+  #footer .eiche-footer-bar {
+    grid-template-columns: 1fr !important;
+  }
+
+  #footer .eiche-footer-bar > .column {
+    min-height: auto;
+  }
+
+  #footer .eiche-footer-brand {
+    padding: 0 0 22px !important;
+  }
+
+  #footer .eiche-footer-contact,
+  #footer .eiche-footer-action {
+    border-left: 0 !important;
+    border-top: 1px solid rgba(15, 47, 36, 0.16) !important;
+    padding: 22px 0 0 !important;
+  }
+
+  #footer .eiche-footer-contact {
+    padding-right: 0 !important;
+  }
+
+  #footer .eiche-footer-action {
+    gap: 16px;
+  }
+
+  #footer .eiche-footer-cta {
+    width: 100%;
+    min-height: 52px;
+  }
+}
+
+@media (max-width: 520px) {
+  #footer .eiche-footer-brand {
+    gap: 14px;
+  }
+
+  #footer .eiche-footer-row {
+    grid-template-columns: 24px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  #footer .eiche-footer-row i {
+    width: 24px;
+    font-size: 1.28rem;
+  }
+}
