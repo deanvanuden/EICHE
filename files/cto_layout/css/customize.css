@@ -3475,3 +3475,414 @@ body:not(.eiche-modern-home):has(.page_3091.trail):has(#wrapper #main > .inside 
     font-size: 1.28rem;
   }
 }
+
+/* Startseite: Google-Bewertungen nach Original-Anmutung, aber ohne externes Widget. */
+body.eiche-modern-home #article-14638.eiche-google-review-section {
+  background: #343434 !important;
+  color: #f7f4ec !important;
+  padding-top: clamp(62px, 7vw, 104px) !important;
+  padding-bottom: clamp(70px, 8vw, 118px) !important;
+}
+
+body.eiche-modern-home #article-14638.eiche-google-review-section > .container {
+  width: min(1240px, calc(100% - 64px)) !important;
+}
+
+body.eiche-modern-home #article-14638 .ce_headline,
+body.eiche-modern-home #article-14638 h4 {
+  color: #f7f4ec !important;
+  font-size: clamp(2rem, 3.1vw, 3rem) !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+  margin-bottom: clamp(32px, 4vw, 58px) !important;
+  hyphens: none !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+}
+
+body.eiche-modern-home #article-14638 .ce_headline:before,
+body.eiche-modern-home #article-14638 h4:before {
+  display: none !important;
+}
+
+body.eiche-modern-home #article-14638 [class*="Review"],
+body.eiche-modern-home #article-14638 [class*="review"],
+body.eiche-modern-home #article-14638 [class*="Card"] {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: inherit !important;
+}
+
+body.eiche-modern-home .eiche-google-reviews {
+  position: relative;
+}
+
+body.eiche-modern-home .eiche-review-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 34px) / 2);
+  gap: 34px;
+  overflow: hidden;
+  padding: 0 0 8px;
+}
+
+body.eiche-modern-home .eiche-review-item {
+  min-width: 0;
+}
+
+body.eiche-modern-home .eiche-review-bubble {
+  position: relative;
+  min-height: 152px;
+  padding: clamp(26px, 3vw, 36px) clamp(28px, 4vw, 42px) !important;
+  background: #555 !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-radius: 32px 32px 32px 8px;
+  color: #fff !important;
+}
+
+body.eiche-modern-home .eiche-review-bubble:after {
+  content: "";
+  position: absolute;
+  left: 34px;
+  bottom: -17px;
+  width: 36px;
+  height: 28px;
+  background: #555;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+body.eiche-modern-home .eiche-review-stars {
+  margin-bottom: 12px;
+  color: #ffc83d !important;
+  font-size: 1.35rem !important;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+body.eiche-modern-home .eiche-review-bubble p {
+  margin: 0 !important;
+  color: #fff !important;
+  font-size: clamp(1.05rem, 1.45vw, 1.28rem) !important;
+  line-height: 1.45 !important;
+}
+
+body.eiche-modern-home .eiche-review-meta {
+  position: relative;
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+  margin-top: 32px;
+  padding-left: 0;
+  color: #fff !important;
+}
+
+body.eiche-modern-home .eiche-review-avatar {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  color: #fff !important;
+  font-size: 1.55rem;
+  line-height: 1;
+  font-weight: 650;
+}
+
+body.eiche-modern-home .eiche-review-avatar--purple {
+  background: #a748c4 !important;
+}
+
+body.eiche-modern-home .eiche-review-avatar--berry {
+  background: #c42f6f !important;
+}
+
+body.eiche-modern-home .eiche-review-avatar--green {
+  background: #3b8464 !important;
+}
+
+body.eiche-modern-home .eiche-google-mark {
+  position: absolute;
+  left: 39px;
+  bottom: 1px;
+  display: grid;
+  place-items: center;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: #fff;
+  color: #4285f4;
+  font-family: Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+body.eiche-modern-home .eiche-review-author {
+  display: block;
+  min-width: 0;
+}
+
+body.eiche-modern-home .eiche-review-author strong {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #fff !important;
+  font-size: clamp(1rem, 1.35vw, 1.18rem);
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+body.eiche-modern-home .eiche-review-author > span {
+  display: block;
+  margin-top: 3px;
+  color: rgba(255, 255, 255, 0.58) !important;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+body.eiche-modern-home .eiche-review-author em {
+  color: #4285f4;
+  font-style: normal;
+}
+
+body.eiche-modern-home .eiche-verified {
+  display: inline-grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #4285f4;
+  color: #fff;
+  font-size: 0.68rem;
+  line-height: 1;
+}
+
+body.eiche-modern-home .eiche-review-next {
+  position: absolute;
+  right: -22px;
+  top: 50%;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #0d0d0d;
+  color: #fff;
+  font-size: 2.1rem;
+  line-height: 1;
+  transform: translateY(-68%);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+}
+
+body.eiche-modern-home #article-14638 .eiche-review-bubble {
+  background: #555 !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  box-shadow: none !important;
+  color: #fff !important;
+}
+
+body.eiche-modern-home #article-14638 .eiche-review-bubble p {
+  color: #fff !important;
+}
+
+body.eiche-modern-home #article-14638 .eiche-review-stars {
+  color: #ffc83d !important;
+  background: transparent !important;
+}
+
+body.eiche-modern-home #article-14638 .eiche-review-avatar {
+  border: 0 !important;
+  box-shadow: none !important;
+  color: #fff !important;
+}
+
+body.eiche-modern-home #article-14638 .eiche-review-avatar--purple {
+  background: #a748c4 !important;
+}
+
+body.eiche-modern-home #article-14638 .eiche-review-avatar--berry {
+  background: #c42f6f !important;
+}
+
+body.eiche-modern-home #article-14638 .eiche-review-avatar--green {
+  background: #3b8464 !important;
+}
+
+body.eiche-modern-home #article-14638 .eiche-review-author strong {
+  color: #fff !important;
+}
+
+body.eiche-modern-home #article-14638 .eiche-review-author > span {
+  color: rgba(255, 255, 255, 0.58) !important;
+}
+
+body.eiche-modern-home #article-14638 .eiche-review-next {
+  background: #0d0d0d !important;
+  border-radius: 50% !important;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28) !important;
+  color: #fff !important;
+}
+
+/* Aktuelles-Seite: ausgelagerte News kompakt und eigenstaendig fuehren. */
+body.eiche-news-page #slider .ce_headerimage {
+  height: clamp(270px, 30vw, 390px) !important;
+  min-height: clamp(270px, 30vw, 390px) !important;
+  background-position: center 42% !important;
+}
+
+body.eiche-news-page #slider + #wrapper {
+  position: relative;
+  z-index: 2;
+  margin-top: clamp(-58px, -5vw, -34px) !important;
+}
+
+body.eiche-news-page #article-aktuelles-intro {
+  padding-top: 0 !important;
+  padding-bottom: clamp(28px, 4vw, 48px) !important;
+  background: transparent !important;
+}
+
+body.eiche-news-page #article-aktuelles-intro > .container {
+  width: min(1040px, calc(100% - 56px)) !important;
+  padding: clamp(34px, 5vw, 58px) clamp(26px, 5vw, 70px) !important;
+  background: rgba(255, 250, 242, 0.97);
+  border: 1px solid rgba(15, 47, 36, 0.08);
+  box-shadow: 0 24px 70px rgba(15, 47, 36, 0.13);
+}
+
+body.eiche-news-page #article-aktuelles-intro .ce_headline_extended {
+  margin-bottom: 18px !important;
+}
+
+body.eiche-news-page #article-aktuelles-intro .ce_headline_extended h1 {
+  font-size: clamp(3rem, 6vw, 5.4rem) !important;
+  line-height: 0.98 !important;
+}
+
+body.eiche-news-page #article-aktuelles-intro .ce_text_extented {
+  margin-top: 0 !important;
+}
+
+body.eiche-news-page #article-aktuelles-intro .ce_text_extented p {
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem) !important;
+  line-height: 1.62 !important;
+}
+
+body.eiche-news-page .eiche-news-list {
+  padding-top: clamp(26px, 4vw, 50px) !important;
+  padding-bottom: clamp(44px, 5vw, 72px) !important;
+}
+
+body.eiche-news-page .eiche-news-list .mod_newslist > h3,
+body.eiche-news-page .eiche-activity-list .eiche-posts-head h4 {
+  font-size: clamp(2rem, 3.2vw, 3.2rem) !important;
+  line-height: 1.04 !important;
+  text-wrap: balance;
+}
+
+body.eiche-news-page .eiche-activity-list {
+  background: var(--eiche-paper) !important;
+  padding-top: clamp(36px, 5vw, 64px) !important;
+  padding-bottom: clamp(58px, 7vw, 96px) !important;
+}
+
+body.eiche-news-page .eiche-post-carousel {
+  gap: 18px;
+}
+
+body.eiche-news-page .eiche-post-card,
+body.eiche-news-page .newslist-v3 {
+  transition: transform 260ms ease, box-shadow 260ms ease;
+}
+
+body.eiche-news-page .eiche-post-card:hover,
+body.eiche-news-page .newslist-v3:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 58px rgba(15, 47, 36, 0.13) !important;
+}
+
+@media (max-width: 1100px) {
+  body.eiche-news-page #mod_news_679,
+  body.eiche-news-page .mod_newslist_v3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  body.eiche-news-page .eiche-post-carousel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  body.eiche-modern-home #article-14638.eiche-google-review-section > .container {
+    width: min(100% - 28px, 760px) !important;
+  }
+
+  body.eiche-modern-home .eiche-review-track {
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    overflow: visible;
+    padding: 0;
+  }
+
+  body.eiche-modern-home .eiche-review-next {
+    display: none;
+  }
+
+  body.eiche-news-page #article-aktuelles-intro > .container {
+    width: min(100% - 28px, 680px) !important;
+  }
+}
+
+@media (max-width: 620px) {
+  body.eiche-modern-home #article-14638.eiche-google-review-section {
+    padding-top: 48px !important;
+    padding-bottom: 58px !important;
+  }
+
+  body.eiche-modern-home #article-14638 h4 {
+    font-size: clamp(1.75rem, 8vw, 2rem) !important;
+    white-space: nowrap;
+  }
+
+  body.eiche-modern-home .eiche-review-bubble {
+    min-height: auto;
+    padding: 24px 22px !important;
+    border-radius: 24px 24px 24px 8px;
+  }
+
+  body.eiche-modern-home .eiche-review-meta {
+    grid-template-columns: 50px minmax(0, 1fr);
+    gap: 15px;
+  }
+
+  body.eiche-modern-home .eiche-review-avatar {
+    width: 50px;
+    height: 50px;
+    font-size: 1.32rem;
+  }
+
+  body.eiche-modern-home .eiche-google-mark {
+    left: 34px;
+    bottom: 0;
+  }
+
+  body.eiche-news-page #slider .ce_headerimage {
+    height: 260px !important;
+    min-height: 260px !important;
+  }
+
+  body.eiche-news-page #article-aktuelles-intro > .container {
+    padding: 28px 22px 32px !important;
+  }
+
+  body.eiche-news-page #mod_news_679,
+  body.eiche-news-page .mod_newslist_v3,
+  body.eiche-news-page .eiche-post-carousel {
+    grid-template-columns: 1fr !important;
+  }
+}
