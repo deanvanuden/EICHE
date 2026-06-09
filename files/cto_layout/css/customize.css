@@ -497,6 +497,10 @@ body.eiche-modern-home #slider .mod_article {
   display: none !important;
 }
 
+body.eiche-modern-home #wrapper {
+  margin-top: 0 !important;
+}
+
 body.eiche-modern-home #wrapper #article-14783,
 body.eiche-modern-home #wrapper #article-14784 {
   display: none !important;
@@ -826,9 +830,11 @@ body.eiche-modern-home #wrapper #article-14784 {
 }
 
 .eiche-tradition-band {
+  position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  height: clamp(430px, 36vw, 560px);
+  height: clamp(380px, 29vw, 420px);
   background: var(--eiche-green);
   color: #fff;
   overflow: hidden;
@@ -840,7 +846,7 @@ body.eiche-modern-home #wrapper #article-14784 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: clamp(52px, 5.6vw, 88px) clamp(44px, 7vw, 118px) clamp(50px, 5.6vw, 86px) clamp(52px, 8vw, 132px);
+  padding: clamp(32px, 4.2vw, 58px) clamp(32px, 4.4vw, 78px) clamp(32px, 4.2vw, 58px) clamp(48px, 6.4vw, 96px);
   overflow: hidden;
   isolation: isolate;
 }
@@ -851,23 +857,14 @@ body.eiche-modern-home #wrapper #article-14784 {
 
 .eiche-tradition-leaf {
   position: absolute;
-  top: clamp(30px, 4vw, 64px);
-  right: clamp(34px, 5.5vw, 96px);
+  top: clamp(28px, 3.4vw, 52px);
+  right: clamp(36px, 5vw, 86px);
   z-index: -1;
-  width: clamp(86px, 8.2vw, 142px);
+  width: clamp(72px, 6.8vw, 108px);
   height: auto;
-  color: var(--eiche-gold);
-  opacity: 0.18;
-  transform: rotate(10deg);
-}
-
-.eiche-tradition-leaf path {
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  vector-effect: non-scaling-stroke;
+  opacity: 0.22;
+  pointer-events: none;
+  transform: rotate(-6deg);
 }
 
 .eiche-tradition-copy h2,
@@ -877,30 +874,34 @@ body.eiche-modern-home #wrapper #article-14784 {
 
 .eiche-tradition-copy h2 {
   max-width: 580px;
+  font-size: clamp(1.72rem, 2.25vw, 2.35rem) !important;
+  line-height: 1.12 !important;
 }
 
 .eiche-tradition-copy h2:before {
-  width: 64px;
+  width: 46px;
   height: 3px;
-  margin: 0 0 22px;
+  margin: 0 0 18px;
 }
 
 .eiche-tradition-copy p {
-  max-width: 500px;
-  margin: 28px 0 clamp(40px, 5vw, 68px) !important;
+  max-width: 420px;
+  margin: 22px 0 clamp(30px, 4vw, 48px) !important;
   opacity: 0.88;
+  font-size: clamp(0.9rem, 1.05vw, 1rem);
+  line-height: 1.6;
 }
 
 .eiche-stats {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0;
-  width: min(100%, 720px);
+  width: min(100%, 620px);
 }
 
 .eiche-stats div {
   min-width: 0;
-  padding: 0 clamp(24px, 2.2vw, 42px);
+  padding: 0 clamp(16px, 1.7vw, 28px);
   border-right: 1px solid rgba(221, 182, 122, 0.48);
 }
 
@@ -917,7 +918,7 @@ body.eiche-modern-home #wrapper #article-14784 {
 .eiche-stats small {
   display: block;
   color: rgba(255,255,255,0.82);
-  font-size: 0.92rem;
+  font-size: 0.86rem;
   line-height: 1.35;
   white-space: nowrap;
 }
@@ -931,7 +932,7 @@ body.eiche-modern-home #wrapper #article-14784 {
   margin: 0 0 8px;
   color: var(--eiche-gold);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.55rem, 3.15vw, 3.35rem);
+  font-size: clamp(2.05rem, 2.65vw, 2.8rem);
   font-weight: 500;
   line-height: 1;
   white-space: nowrap;
@@ -940,7 +941,7 @@ body.eiche-modern-home #wrapper #article-14784 {
 }
 
 .eiche-stats div:nth-child(3) strong {
-  font-size: clamp(2.15rem, 2.55vw, 3rem);
+  font-size: clamp(1.9rem, 2.35vw, 2.55rem);
 }
 
 .eiche-tradition-image {
@@ -955,7 +956,7 @@ body.eiche-modern-home #wrapper #article-14784 {
   height: 100%;
   display: block;
   object-fit: cover;
-  object-position: 50% 48%;
+  object-position: 50% 56%;
   filter: saturate(0.82) contrast(1.02);
 }
 
