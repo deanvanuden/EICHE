@@ -3045,13 +3045,12 @@ body:not(.eiche-modern-home) #slider .article-pt {
 
 #footer .eiche-footer-leaf {
   flex: 0 0 auto;
-  width: clamp(54px, 5vw, 76px) !important;
-  height: clamp(54px, 5vw, 76px) !important;
+  width: clamp(58px, 5.8vw, 86px) !important;
+  height: clamp(74px, 6.8vw, 106px) !important;
   max-width: none !important;
   max-height: none !important;
   object-fit: contain;
-  opacity: 0.68;
-  filter: invert(56%) sepia(24%) saturate(846%) hue-rotate(356deg) brightness(92%) contrast(86%);
+  opacity: 1;
 }
 
 #footer .eiche-footer-brand-copy {
