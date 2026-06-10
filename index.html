@@ -874,7 +874,7 @@ Exklusiv. Innovativ. Creativ. Hochwertig. Effektiv</div></li>
       </div>
     </article>
   </div>
-  <span class="eiche-review-next" aria-hidden="true">›</span>
+  <button class="eiche-review-next" type="button" aria-label="Nächste Bewertung">›</button>
 </div>
   
 </div>
@@ -2361,6 +2361,106 @@ jQuery(document).ready(function()
 </script>
 <div id="viewport-pixel"></div>
 <div id="outdated-browser">You are using an outdated browser. The website may not be displayed correctly. <span>Close</span></div>
+<script id="eiche-review-carousel">
+(function(){
+  function init(){
+    var root = document.querySelector('.eiche-google-reviews');
+    if(!root) return;
+
+    var track = root.querySelector('.eiche-review-track');
+    var next = root.querySelector('.eiche-review-next');
+    var items = track ? Array.prototype.slice.call(track.querySelectorAll('.eiche-review-item')) : [];
+    if(!track || !next || items.length < 2) return;
+
+    var index = 0;
+    var timer = null;
+    var scrollTimer = null;
+    var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function visibleCount(){
+      return window.matchMedia && window.matchMedia('(min-width: 901px)').matches ? 2 : 1;
+    }
+
+    function maxIndex(){
+      return Math.max(0, items.length - visibleCount());
+    }
+
+    function itemLeft(nextIndex){
+      var item = items[Math.min(nextIndex, items.length - 1)];
+      return item ? item.offsetLeft - track.offsetLeft : 0;
+    }
+
+    function setIndex(nextIndex, animated){
+      var max = maxIndex();
+      index = nextIndex > max ? 0 : Math.max(0, nextIndex);
+      root.dataset.reviewIndex = String(index);
+      track.scrollTo({
+        left: itemLeft(index),
+        behavior: animated ? 'smooth' : 'auto'
+      });
+    }
+
+    function syncIndexFromScroll(){
+      var left = track.scrollLeft;
+      var closest = 0;
+      var closestDistance = Infinity;
+
+      items.forEach(function(item, itemIndex){
+        if(itemIndex > maxIndex()) return;
+        var distance = Math.abs(left - (item.offsetLeft - track.offsetLeft));
+        if(distance < closestDistance){
+          closest = itemIndex;
+          closestDistance = distance;
+        }
+      });
+
+      index = closest;
+      root.dataset.reviewIndex = String(index);
+    }
+
+    function advance(){
+      setIndex(index + 1, true);
+    }
+
+    function stop(){
+      if(timer){
+        clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    function start(){
+      if(prefersReducedMotion || timer) return;
+      timer = setInterval(advance, 4300);
+    }
+
+    next.addEventListener('click', function(){
+      stop();
+      advance();
+      start();
+    });
+
+    track.addEventListener('scroll', function(){
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(syncIndexFromScroll, 120);
+    }, {passive: true});
+
+    root.addEventListener('pointerenter', stop);
+    root.addEventListener('pointerleave', start);
+    root.addEventListener('focusin', stop);
+    root.addEventListener('focusout', start);
+
+    window.addEventListener('resize', function(){
+      setIndex(Math.min(index, maxIndex()), false);
+    }, {passive: true});
+
+    setIndex(0, false);
+    start();
+  }
+
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script>
 <script id="eiche-nav-bridge">
 (function(){
   function init(){

@@ -3641,25 +3641,79 @@ body:not(.eiche-modern-home):not(.eiche-news-page):has(#slider.empty):has(#main 
   }
 }
 
-/* Startseite: Google-Bewertungen nach Original-Anmutung, aber ohne externes Widget. */
+/* Startseite: Firmen-Erklaerbereich kompakter und weicher rahmen. */
+body.eiche-modern-home #article-14617 {
+  padding-top: clamp(34px, 4.5vw, 68px) !important;
+  padding-bottom: clamp(34px, 4.5vw, 68px) !important;
+}
+
+body.eiche-modern-home #article-14617 > .container {
+  width: min(1320px, calc(100% - 64px)) !important;
+}
+
+body.eiche-modern-home #article-14617 .ce_bgimage {
+  overflow: hidden;
+  border-radius: clamp(22px, 2.3vw, 30px);
+  background-color: #eee6da !important;
+  box-shadow: 0 26px 70px rgba(15, 47, 36, 0.1);
+}
+
+body.eiche-modern-home #article-14617 .ce_bgimage-inside {
+  padding: clamp(40px, 4.8vw, 62px) clamp(28px, 5.5vw, 70px) clamp(38px, 4.5vw, 58px) !important;
+}
+
+body.eiche-modern-home #article-14617 .ce_text_extented:first-child {
+  margin-bottom: clamp(16px, 2vw, 24px) !important;
+}
+
+body.eiche-modern-home #article-14617 .ce_headline_extended h1 {
+  font-size: clamp(3.25rem, 6vw, 5.35rem) !important;
+  line-height: 0.98 !important;
+}
+
+body.eiche-modern-home #article-14617 .ce_headline_extended h4 {
+  margin-top: clamp(12px, 1.6vw, 18px) !important;
+  margin-bottom: 0 !important;
+  font-size: clamp(1.25rem, 1.8vw, 1.65rem) !important;
+}
+
+body.eiche-modern-home #article-14617 .ce_text_extented.mt-m {
+  margin-top: clamp(22px, 2.8vw, 34px) !important;
+}
+
+body.eiche-modern-home #article-14617 .ce_text_extented p {
+  max-width: 1080px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  line-height: 1.55 !important;
+}
+
+body.eiche-modern-home #article-14617 .ce_text_extented p + p {
+  margin-top: 16px !important;
+}
+
+/* Startseite: Google-Bewertungen nach Original-Anmutung, kompakt ohne grosse Flaeche. */
 body.eiche-modern-home #article-14638.eiche-google-review-section {
-  background: #343434 !important;
-  color: #f7f4ec !important;
-  padding-top: clamp(62px, 7vw, 104px) !important;
-  padding-bottom: clamp(70px, 8vw, 118px) !important;
+  background: var(--eiche-paper) !important;
+  color: var(--eiche-green) !important;
+  padding-top: clamp(42px, 5vw, 72px) !important;
+  padding-bottom: clamp(44px, 5.5vw, 78px) !important;
 }
 
 body.eiche-modern-home #article-14638.eiche-google-review-section > .container {
-  width: min(1240px, calc(100% - 64px)) !important;
+  position: relative;
+  width: min(1120px, calc(100% - 64px)) !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 body.eiche-modern-home #article-14638 .ce_headline,
 body.eiche-modern-home #article-14638 h4 {
-  color: #f7f4ec !important;
-  font-size: clamp(2rem, 3.1vw, 3rem) !important;
-  font-weight: 500 !important;
+  color: var(--eiche-green) !important;
+  font-size: clamp(2rem, 3.1vw, 2.85rem) !important;
+  font-weight: 700 !important;
   letter-spacing: 0 !important;
-  margin-bottom: clamp(32px, 4vw, 58px) !important;
+  margin-bottom: clamp(24px, 3.4vw, 38px) !important;
   hyphens: none !important;
   overflow-wrap: normal !important;
   word-break: normal !important;
@@ -3667,7 +3721,12 @@ body.eiche-modern-home #article-14638 h4 {
 
 body.eiche-modern-home #article-14638 .ce_headline:before,
 body.eiche-modern-home #article-14638 h4:before {
-  display: none !important;
+  content: "";
+  display: block !important;
+  width: 66px;
+  height: 3px;
+  margin: 0 auto 16px;
+  background: var(--eiche-gold);
 }
 
 body.eiche-modern-home #article-14638 [class*="Review"],
@@ -3681,28 +3740,38 @@ body.eiche-modern-home #article-14638 [class*="Card"] {
 
 body.eiche-modern-home .eiche-google-reviews {
   position: relative;
+  isolation: isolate;
 }
 
 body.eiche-modern-home .eiche-review-track {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: calc((100% - 34px) / 2);
-  gap: 34px;
-  overflow: hidden;
-  padding: 0 0 8px;
+  --review-gap: 28px;
+  display: flex;
+  gap: var(--review-gap);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding: 4px 0 10px;
+}
+
+body.eiche-modern-home .eiche-review-track::-webkit-scrollbar {
+  display: none;
 }
 
 body.eiche-modern-home .eiche-review-item {
+  flex: 0 0 calc((100% - var(--review-gap)) / 2);
   min-width: 0;
+  scroll-snap-align: start;
 }
 
 body.eiche-modern-home .eiche-review-bubble {
   position: relative;
-  min-height: 152px;
-  padding: clamp(26px, 3vw, 36px) clamp(28px, 4vw, 42px) !important;
+  min-height: 136px;
+  padding: clamp(24px, 3vw, 32px) clamp(26px, 3.4vw, 38px) !important;
   background: #555 !important;
-  border: 1px solid rgba(255, 255, 255, 0.06) !important;
-  border-radius: 32px 32px 32px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 28px 28px 28px 8px;
   color: #fff !important;
 }
 
@@ -3710,47 +3779,46 @@ body.eiche-modern-home .eiche-review-bubble:after {
   content: "";
   position: absolute;
   left: 34px;
-  bottom: -17px;
-  width: 36px;
-  height: 28px;
+  bottom: -16px;
+  width: 34px;
+  height: 26px;
   background: #555;
   clip-path: polygon(0 0, 100% 0, 0 100%);
 }
 
 body.eiche-modern-home .eiche-review-stars {
-  margin-bottom: 12px;
+  margin-bottom: 11px;
   color: #ffc83d !important;
-  font-size: 1.35rem !important;
-  letter-spacing: 2px;
+  font-size: 1.25rem !important;
+  letter-spacing: 0;
   line-height: 1;
 }
 
 body.eiche-modern-home .eiche-review-bubble p {
   margin: 0 !important;
   color: #fff !important;
-  font-size: clamp(1.05rem, 1.45vw, 1.28rem) !important;
+  font-size: clamp(1.02rem, 1.25vw, 1.18rem) !important;
   line-height: 1.45 !important;
 }
 
 body.eiche-modern-home .eiche-review-meta {
   position: relative;
   display: grid;
-  grid-template-columns: 58px minmax(0, 1fr);
-  gap: 18px;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 16px;
   align-items: center;
-  margin-top: 32px;
-  padding-left: 0;
-  color: #fff !important;
+  margin-top: 29px;
+  color: var(--eiche-green) !important;
 }
 
 body.eiche-modern-home .eiche-review-avatar {
   display: grid;
   place-items: center;
-  width: 58px;
-  height: 58px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
   color: #fff !important;
-  font-size: 1.55rem;
+  font-size: 1.42rem;
   line-height: 1;
   font-weight: 650;
 }
@@ -3769,17 +3837,17 @@ body.eiche-modern-home .eiche-review-avatar--green {
 
 body.eiche-modern-home .eiche-google-mark {
   position: absolute;
-  left: 39px;
+  left: 36px;
   bottom: 1px;
   display: grid;
   place-items: center;
-  width: 19px;
-  height: 19px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   background: #fff;
   color: #4285f4;
   font-family: Arial, sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 800;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
 }
@@ -3793,18 +3861,18 @@ body.eiche-modern-home .eiche-review-author strong {
   display: flex;
   align-items: center;
   gap: 7px;
-  color: #fff !important;
-  font-size: clamp(1rem, 1.35vw, 1.18rem);
-  line-height: 1.25;
+  color: var(--eiche-green) !important;
+  font-size: clamp(1rem, 1.24vw, 1.12rem);
+  line-height: 1.22;
   font-weight: 800;
 }
 
 body.eiche-modern-home .eiche-review-author > span {
   display: block;
   margin-top: 3px;
-  color: rgba(255, 255, 255, 0.58) !important;
-  font-size: 0.92rem;
-  font-weight: 500;
+  color: rgba(15, 47, 36, 0.58) !important;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 body.eiche-modern-home .eiche-review-author em {
@@ -3822,29 +3890,40 @@ body.eiche-modern-home .eiche-verified {
   color: #fff;
   font-size: 0.68rem;
   line-height: 1;
+  flex: 0 0 auto;
 }
 
 body.eiche-modern-home .eiche-review-next {
   position: absolute;
   right: -22px;
-  top: 50%;
+  top: 42%;
   z-index: 3;
   display: grid;
   place-items: center;
   width: 44px;
   height: 44px;
+  border: 0;
   border-radius: 50%;
-  background: #0d0d0d;
-  color: #fff;
-  font-size: 2.1rem;
+  background: #0d0d0d !important;
+  color: #fff !important;
+  cursor: pointer;
+  font: inherit;
+  font-size: 2rem;
   line-height: 1;
-  transform: translateY(-68%);
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+  transform: translateY(-50%);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28) !important;
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+body.eiche-modern-home .eiche-review-next:hover,
+body.eiche-modern-home .eiche-review-next:focus-visible {
+  background: var(--eiche-green) !important;
+  transform: translateY(-50%) scale(1.05);
 }
 
 body.eiche-modern-home #article-14638 .eiche-review-bubble {
   background: #555 !important;
-  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
   box-shadow: none !important;
   color: #fff !important;
 }
@@ -3877,15 +3956,16 @@ body.eiche-modern-home #article-14638 .eiche-review-avatar--green {
 }
 
 body.eiche-modern-home #article-14638 .eiche-review-author strong {
-  color: #fff !important;
+  color: var(--eiche-green) !important;
 }
 
 body.eiche-modern-home #article-14638 .eiche-review-author > span {
-  color: rgba(255, 255, 255, 0.58) !important;
+  color: rgba(15, 47, 36, 0.58) !important;
 }
 
 body.eiche-modern-home #article-14638 .eiche-review-next {
   background: #0d0d0d !important;
+  border: 0 !important;
   border-radius: 50% !important;
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28) !important;
   color: #fff !important;
@@ -3981,21 +4061,41 @@ body.eiche-news-page .newslist-v3:hover {
 }
 
 @media (max-width: 900px) {
+  body.eiche-modern-home #article-14617 > .container {
+    width: min(100% - 28px, 760px) !important;
+  }
+
+  body.eiche-modern-home #article-14617 .ce_bgimage {
+    border-radius: 22px;
+  }
+
+  body.eiche-modern-home #article-14617 .ce_bgimage-inside {
+    padding: 38px 24px 42px !important;
+  }
+
+  body.eiche-modern-home #article-14617 .ce_headline_extended h1 {
+    font-size: clamp(2.6rem, 10vw, 4.4rem) !important;
+  }
+
   body.eiche-modern-home #article-14638.eiche-google-review-section > .container {
     width: min(100% - 28px, 760px) !important;
   }
 
   body.eiche-modern-home .eiche-review-track {
-    grid-auto-flow: row;
-    grid-auto-columns: auto;
-    grid-template-columns: 1fr;
-    gap: 24px;
-    overflow: visible;
-    padding: 0;
+    --review-gap: 20px;
+    display: flex;
+    gap: var(--review-gap);
+    overflow-x: auto;
+    padding: 4px 0 8px;
+  }
+
+  body.eiche-modern-home .eiche-review-item {
+    flex-basis: 100%;
   }
 
   body.eiche-modern-home .eiche-review-next {
-    display: none;
+    right: 8px;
+    top: 38%;
   }
 
   body.eiche-news-page #article-aktuelles-intro > .container {
@@ -4004,20 +4104,54 @@ body.eiche-news-page .newslist-v3:hover {
 }
 
 @media (max-width: 620px) {
+  body.eiche-modern-home #article-14617 {
+    padding-top: 28px !important;
+    padding-bottom: 34px !important;
+  }
+
+  body.eiche-modern-home #article-14617 .ce_bgimage-inside {
+    padding: 34px 20px 38px !important;
+  }
+
+  body.eiche-modern-home #article-14617 .ce_headline_extended h1 {
+    font-size: clamp(2.35rem, 10.5vw, 3.15rem) !important;
+  }
+
+  body.eiche-modern-home #article-14617 .ce_headline_extended h4 {
+    font-size: clamp(1.1rem, 5vw, 1.28rem) !important;
+  }
+
+  body.eiche-modern-home #article-14617 .ce_text_extented p {
+    font-size: clamp(0.98rem, 4.3vw, 1.06rem) !important;
+    line-height: 1.55 !important;
+  }
+
+  body.eiche-modern-home #article-14617 .ce_text_extented:first-child p,
+  body.eiche-modern-home #article-14617 .ce_text_extented.mt-xxs p {
+    font-size: 0.92rem !important;
+  }
+
   body.eiche-modern-home #article-14638.eiche-google-review-section {
-    padding-top: 48px !important;
-    padding-bottom: 58px !important;
+    padding-top: 38px !important;
+    padding-bottom: 48px !important;
   }
 
   body.eiche-modern-home #article-14638 h4 {
-    font-size: clamp(1.75rem, 8vw, 2rem) !important;
-    white-space: nowrap;
+    font-size: clamp(1.45rem, 6.2vw, 1.72rem) !important;
   }
 
   body.eiche-modern-home .eiche-review-bubble {
     min-height: auto;
-    padding: 24px 22px !important;
+    padding: 23px 76px 23px 22px !important;
     border-radius: 24px 24px 24px 8px;
+  }
+
+  body.eiche-modern-home .eiche-review-stars {
+    font-size: 1.08rem !important;
+  }
+
+  body.eiche-modern-home .eiche-review-bubble p {
+    font-size: 1rem !important;
   }
 
   body.eiche-modern-home .eiche-review-meta {
@@ -4034,6 +4168,14 @@ body.eiche-news-page .newslist-v3:hover {
   body.eiche-modern-home .eiche-google-mark {
     left: 34px;
     bottom: 0;
+  }
+
+  body.eiche-modern-home .eiche-review-author strong {
+    font-size: 0.98rem;
+  }
+
+  body.eiche-modern-home .eiche-review-author > span {
+    font-size: 0.82rem;
   }
 
   body.eiche-news-page #slider .ce_headerimage {
