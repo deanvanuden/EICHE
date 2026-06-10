@@ -39,12 +39,9 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 300;
-  src: url('../fonts/montserrat-v25-latin-300.eot'); /* IE9 Compat Modes */
   src: local(''),
-       url('../fonts/montserrat-v25-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('../fonts/montserrat-v25-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
        url('../fonts/montserrat-v25-latin-300.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/montserrat-v25-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../fonts/montserrat-v25-latin-300.svg#Montserrat') format('svg'); /* Legacy iOS */
 }
 /* montserrat-regular - latin */
@@ -52,12 +49,9 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/montserrat-v25-latin-regular.eot'); /* IE9 Compat Modes */
   src: local(''),
-       url('../fonts/montserrat-v25-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('../fonts/montserrat-v25-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
        url('../fonts/montserrat-v25-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/montserrat-v25-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../fonts/montserrat-v25-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
 }
 /* montserrat-500 - latin */
@@ -65,12 +59,9 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
-  src: url('../fonts/montserrat-v25-latin-500.eot'); /* IE9 Compat Modes */
   src: local(''),
-       url('../fonts/montserrat-v25-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('../fonts/montserrat-v25-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
        url('../fonts/montserrat-v25-latin-500.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/montserrat-v25-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../fonts/montserrat-v25-latin-500.svg#Montserrat') format('svg'); /* Legacy iOS */
 }
 /* montserrat-700 - latin */
@@ -78,12 +69,9 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/montserrat-v25-latin-700.eot'); /* IE9 Compat Modes */
   src: local(''),
-       url('../fonts/montserrat-v25-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('../fonts/montserrat-v25-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
        url('../fonts/montserrat-v25-latin-700.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/montserrat-v25-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../fonts/montserrat-v25-latin-700.svg#Montserrat') format('svg'); /* Legacy iOS */
 }
 /* montserrat-900 - latin */
@@ -91,12 +79,9 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 900;
-  src: url('../fonts/montserrat-v25-latin-900.eot'); /* IE9 Compat Modes */
   src: local(''),
-       url('../fonts/montserrat-v25-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('../fonts/montserrat-v25-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
        url('../fonts/montserrat-v25-latin-900.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/montserrat-v25-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../fonts/montserrat-v25-latin-900.svg#Montserrat') format('svg'); /* Legacy iOS */
 }
 /* montserrat-italic - latin */
@@ -104,12 +89,9 @@
   font-family: 'Montserrat';
   font-style: italic;
   font-weight: 400;
-  src: url('../fonts/montserrat-v25-latin-italic.eot'); /* IE9 Compat Modes */
   src: local(''),
-       url('../fonts/montserrat-v25-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('../fonts/montserrat-v25-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
        url('../fonts/montserrat-v25-latin-italic.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/montserrat-v25-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../fonts/montserrat-v25-latin-italic.svg#Montserrat') format('svg'); /* Legacy iOS */
 }
 .ce_hyperlink_lightbox_video.hyperlink_align_center {
@@ -4616,13 +4598,15 @@ body.eiche-team-page #article-14972 h1 {
 }
 
 body.eiche-team-page #article-14965 {
-  padding-top: clamp(30px, 4vw, 54px) !important;
-  padding-bottom: clamp(42px, 5vw, 70px) !important;
+  padding-top: clamp(26px, 3.5vw, 46px) !important;
+  padding-bottom: clamp(16px, 2.4vw, 30px) !important;
   background: transparent !important;
 }
 
 body.eiche-team-page #article-14965 > .container {
   width: min(1280px, calc(100% - 48px)) !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 body.eiche-team-page #article-14965 .autogrid_row {
@@ -4679,7 +4663,7 @@ body.eiche-team-page #article-14965 .additional {
 }
 
 body.eiche-team-page #article-14773 {
-  padding-top: clamp(36px, 5vw, 64px) !important;
+  padding-top: clamp(22px, 3vw, 38px) !important;
   padding-bottom: clamp(44px, 6vw, 78px) !important;
 }
 
@@ -4698,14 +4682,16 @@ body.eiche-team-page #article-14773 .ce_text_imagebox .inside {
 }
 
 body.eiche-jobs-page #article-14844 {
-  padding-top: clamp(36px, 5vw, 68px) !important;
-  padding-bottom: clamp(34px, 5vw, 64px) !important;
+  padding-top: clamp(28px, 4vw, 52px) !important;
+  padding-bottom: clamp(24px, 4vw, 46px) !important;
   background: var(--eiche-paper) !important;
   color: var(--eiche-ink) !important;
 }
 
 body.eiche-jobs-page #article-14844 > .container {
   width: min(1180px, calc(100% - 48px)) !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 body.eiche-jobs-page #article-14844,
@@ -4776,9 +4762,14 @@ body.eiche-jobs-page #article-14844 .ce_text.h-align-center {
 }
 
 body.eiche-jobs-page #article-14845 {
-  padding-top: clamp(26px, 4vw, 46px) !important;
-  padding-bottom: clamp(42px, 6vw, 76px) !important;
+  padding-top: clamp(18px, 3vw, 32px) !important;
+  padding-bottom: clamp(34px, 5vw, 58px) !important;
   background: transparent !important;
+}
+
+body.eiche-jobs-page #article-14845 > .container {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 body.eiche-certificates-page #article-14916 {
@@ -4830,14 +4821,16 @@ body.eiche-certificates-page #article-14916 ul.flex-gallery img {
 }
 
 body.eiche-testimonials-page #article-14911 {
-  padding-top: clamp(30px, 5vw, 58px) !important;
-  padding-bottom: clamp(34px, 5vw, 64px) !important;
+  padding-top: clamp(26px, 4vw, 48px) !important;
+  padding-bottom: clamp(18px, 3vw, 34px) !important;
   background: transparent !important;
   color: var(--eiche-ink) !important;
 }
 
 body.eiche-testimonials-page #article-14911 > .container {
   width: min(1240px, calc(100% - 48px)) !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 body.eiche-testimonials-page #article-14911 .autogrid_row {
@@ -4898,13 +4891,15 @@ body.eiche-testimonials-page #article-14911 .name {
 }
 
 body.eiche-testimonials-page #article-14908 {
-  padding-top: clamp(18px, 3vw, 34px) !important;
-  padding-bottom: clamp(46px, 6vw, 84px) !important;
+  padding-top: clamp(14px, 2vw, 24px) !important;
+  padding-bottom: clamp(36px, 5vw, 64px) !important;
   background: transparent !important;
 }
 
 body.eiche-testimonials-page #article-14908 > .container {
   width: min(1240px, calc(100% - 48px)) !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 body.eiche-testimonials-page #article-14908 ul.flex-gallery {
@@ -4936,12 +4931,14 @@ body.eiche-testimonials-page #article-14908 ul.flex-gallery img {
 }
 
 body.eiche-service-page #article-14903 {
-  padding-top: clamp(30px, 5vw, 58px) !important;
-  padding-bottom: clamp(46px, 6vw, 84px) !important;
+  padding-top: clamp(28px, 4vw, 48px) !important;
+  padding-bottom: clamp(36px, 5vw, 62px) !important;
 }
 
 body.eiche-service-page #article-14903 > .container {
   width: min(1060px, calc(100% - 48px)) !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 body.eiche-service-page #article-14903 .section {
@@ -4949,7 +4946,7 @@ body.eiche-service-page #article-14903 .section {
 }
 
 body.eiche-service-page #article-14903 .section.active {
-  display: grid;
+  display: grid !important;
   grid-template-columns: minmax(240px, 0.9fr) minmax(0, 1.15fr);
   gap: clamp(28px, 5vw, 64px);
   align-items: start;
